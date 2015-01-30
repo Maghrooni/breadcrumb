@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Breadcrumb : Breadcrumb is javascript object to create Dynamic breadcrumbs based on url of page">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Breadcrumb</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Maghrooni/breadcrumb">View on GitHub</a>
+
+          <h1 id="project_title">Breadcrumb</h1>
+          <h2 id="project_tagline">Breadcrumb is javascript object to create Dynamic breadcrumbs based on url of page</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Maghrooni/breadcrumb/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Maghrooni/breadcrumb/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="breadcrumb" class="anchor" href="#breadcrumb" aria-hidden="true"><span class="octicon octicon-link"></span></a>Breadcrumb</h1>
+
+<p>Breadcrumb is javascript object to create <strong>Dynamic</strong> breadcrumbs based on url of page</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>download and include <code>breadcrumb.js</code> file into header of your html</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>breadcrumb.js<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h2>
+
+<p>here are Example of how to use breadcrumb</p>
+
+<h4>
+<a id="simple" class="anchor" href="#simple" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple</h4>
+
+<p>simple with default options, just call <code>build</code> method of <code>breadcrumb</code> it will build breadcrumbs based on URL.<br></p>
+
+<div class="highlight highlight-javascript"><pre>breadcrumb.build();</pre></div>
+
+<p>Common usage is to call it on main header so each page has it's own breadcrumb !</p>
+
+<h4>
+<a id="overriding-configs" class="anchor" href="#overriding-configs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding Configs</h4>
+
+<p>You can override default configs with your own !</p>
+
+<div class="highlight highlight-javascript"><pre>breadcrumb.main<span class="pl-k">:</span> [{<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>Home<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>link<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>link/to/first/bread<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>class<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>fristClass<span class="pl-pds">'</span></span>}];
+breadcrumb.element <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>ul<span class="pl-pds">'</span></span>;
+breadcrumb.build();</pre></div>
+
+<h4>
+<a id="get-output-string-instead-of-writing-it" class="anchor" href="#get-output-string-instead-of-writing-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Output String instead of Writing it</h4>
+
+<div class="highlight highlight-javascript"><pre>breadcrumb.write <span class="pl-k">=</span> <span class="pl-c1">false</span>;
+<span class="pl-en">console</span><span class="pl-s3">.log</span>(breadcrumb.build());</pre></div>
+
+<h2>
+<a id="configs" class="anchor" href="#configs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configs</h2>
+
+<table>
+<thead>
+<tr>
+<th>Config</th>
+<th align="center">Description</th>
+<th align="right">default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main</code></td>
+<td align="center">Main Bread will be the first Bread and always will be there !</td>
+<td align="right"><code>[{"text": 'Main', "link": '/', 'class': 'active'}]</code></td>
+</tr>
+<tr>
+<td><code>element</code></td>
+<td align="center">Breadcrumb Parent Element</td>
+<td align="right"><code>'ol'</code></td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td align="center">Parent Element Class or Classes</td>
+<td align="right"><code>'breadcrumb'</code></td>
+</tr>
+<tr>
+<td><code>lastClass</code></td>
+<td align="center">Last Bread's Class</td>
+<td align="right"><code>'current-bread'</code></td>
+</tr>
+<tr>
+<td><code>write</code></td>
+<td align="center">Write to Document or Not</td>
+<td align="right"><code>true</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Have fun &amp; <a href="http://maghrooni.ir">Visit My Website</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Breadcrumb maintained by <a href="https://github.com/Maghrooni">Maghrooni</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
