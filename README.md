@@ -31,11 +31,11 @@ breadcrumb.write = false;
 console.log(breadcrumb.build());
 ```
 ##Configs
-| Config        | Description           | default |
+| Config      | Description           | default |
 | ------------- |:-------------:| -----:|
-| `main`          | Main Braed will be the first Bread and always will be there ! | `[{"text": 'Main', "link": '/', 'class': 'active'}]` |
-| `element`      | Breadcrumb Parent Element     |   `'ol'` |
-| `class` | Parent Element Class or Classes      |   `'breadcrumb'` |
+| `main`      | Main Bread will be the first Bread and always will be there ! | `[{"text": 'Main', "link": '/', 'class': 'active'}]`   |
+| `element`   | Breadcrumb Parent Element     |   `'ol'` |
+| `class`     | Parent Element Class or Classes      |   `'breadcrumb'` |
 | `lastClass` | Last Bread's Class       |   `'current-bread'` |
 | `write` | Write to Document or Not       |   `true` |
 
