@@ -1,6 +1,6 @@
 # Breadcrumb
 
-Braedcrumb is javascript object to create **Dynamic** breadcrumbs based on url of page
+Breadcrumb is javascript object to create **Dynamic** breadcrumbs based on url of page
 
 ### Installation
 download and include `breadcrumb.js` file into header of your html
