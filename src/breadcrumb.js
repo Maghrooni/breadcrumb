@@ -51,6 +51,16 @@ var breadcrumb = {
      */
     lastClass: 'current-bread',
     /**
+     * Exclude from Breadcrumbs
+     * 
+     * with this Property You can Exclude Parts of URL to show in BreadCrumbs
+     * 
+     * By Default We will Exclude Hashtag and Empty string
+     * 
+     * @type Array Exclusion Array
+     */
+    exclude: ['#', ''],
+    /**
      * Write to Document
      * 
      * if you want breadcrumb to write output to document or only return the output string 
@@ -113,7 +123,7 @@ var breadcrumb = {
          * Build Breads 
          */
         for (var j = 0; j < breadLen - 1; j++) {
-            if (breads[j].text != '') {
+            if (this.exclude.indexOf(breads[j].text) == -1) {
                 output += '<li class="' + breads[j].class + '"><a href="' + breads[j].link + '">' + breads[j].text + '</a></li>';
             }
         }

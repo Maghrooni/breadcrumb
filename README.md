@@ -25,6 +25,11 @@ breadcrumb.main: [{"text": 'Home', "link": 'link/to/first/bread', 'class': 'fris
 breadcrumb.element = 'ul';
 breadcrumb.build();
 ```
+####Exclude Parts of Url being shown in Breadcrumb
+```javascript
+breadcrumb.exclude = ['#',''];
+breadcrumb.build();
+```
 ####Get Output String instead of Writing it
 ```javascript
 breadcrumb.write = false;
@@ -37,6 +42,7 @@ console.log(breadcrumb.build());
 | `element`   | Breadcrumb Parent Element     |   `'ol'` |
 | `class`     | Parent Element Class or Classes      |   `'breadcrumb'` |
 | `lastClass` | Last Bread's Class       |   `'current-bread'` |
+| `exclude` | Array containing texts to exclude from breadcrumbs       |   [`#`,``] |
 | `write` | Write to Document or Not       |   `true` |
 
 Have fun & [Visit My Website]
