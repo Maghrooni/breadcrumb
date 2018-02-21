@@ -36,6 +36,7 @@ breadcrumb.write = false;
 console.log(breadcrumb.build());
 ```
 ##Configs
+
 | Config      | Description           | default |
 | ------------- |:-------------:| -----:|
 | `main`      | Main Bread will be the first Bread and always will be there ! | `[{"text": 'Main', "link": '/', 'class': 'active'}]`   |
